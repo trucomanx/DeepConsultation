@@ -4,7 +4,6 @@ setup(
     name="deep-consultation",
     version="0.1.0",
     packages=find_packages(),
-    install_requires=[],
     author="Fernando Pujaico Rivera",
     author_email="fernando.pujaico.rivera@gmail.com",
     description="Uma biblioteca para consultas com GPTs",
