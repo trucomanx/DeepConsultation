@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     author="Fernando Pujaico Rivera",
     author_email="fernando.pujaico.rivera@gmail.com",
-    description="Uma biblioteca para consultas com GPTs",
+    description="A library for queries with GPTs",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/trucomanx/DeepConsultation",
