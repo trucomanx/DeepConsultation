@@ -1,25 +1,22 @@
 # DeepConsultation
-deep consultation Learning Tools
+Deep consultation Learning Tools
 
-# Packaging
+## Install from source
 
-Download the source code
+Installing `deep-consultation` library
 
-    git clone https://github.com/trucomanx/DeepConsultation.git
+```bash
+git clone https://github.com/trucomanx/DeepConsultation.git
+cd DeepConsultation/src
+python setup.py sdist
+pip install dist/deep-consultation-*.tar.gz
+```
+    
+## Install from PIP
 
-The next command generates the `dist/deep-consultation-VERSION.tar.gz` file.
+```bash
+pip install --upgrade deep-consultation
+```
 
-    cd DeepConsultation/src
-    python setup.py sdist
-
-For more informations use `python setup.py --help-commands`
-
-# Install 
-
-Install the packaged library
-
-    pip install dist/deep-consultation-VERSION.tar.gz
-
-
-
-
+## More information
+More information can be found in [README.extras.md](README.extras.md)
