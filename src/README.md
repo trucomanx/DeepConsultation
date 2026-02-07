@@ -1,4 +1,5 @@
-# DeepConsultation
+# deep_consultation
+
 Deep consultation Learning Tools
 
 ## Install from PIP
@@ -8,4 +9,5 @@ pip install --upgrade deep-consultation
 ```
 
 ## License
+
 This project is licensed under the GPLv3 License.

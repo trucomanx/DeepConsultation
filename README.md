@@ -1,4 +1,5 @@
-# DeepConsultation
+# deep_consultation
+
 Deep consultation Learning Tools
 
 ## Install from source
@@ -17,8 +18,11 @@ pip install dist/deep-consultation-*.tar.gz
 ```bash
 pip install --upgrade deep-consultation
 ```
+
 ## License
+
 This project is licensed under the GPLv3 License.
 
 ## More information
-More information can be found in [README.extras.md](README.extras.md)
+
+More information can be found in [doc](doc)
