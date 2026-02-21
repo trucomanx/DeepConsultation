@@ -5,10 +5,12 @@ from openai import OpenAI
 
 class ChatDeepInfra:
     def __init__(self, base_url: str, api_key: str, model: str):
-        self.client = OpenAI(
-            api_key=api_key,
-            base_url=base_url,
-        )
+        # Cria client OpenAI, passando base_url apenas se não for None
+        if base_url and base_url.strip():
+            self.client = OpenAI(api_key=api_key, base_url=base_url.strip())
+        else:
+            self.client = OpenAI(api_key=api_key)
+            
         self.model = model
         self.system_prompt = "You are a helpful assistant."
         self.history = []  # guarda mensagens no formato OpenAI
@@ -94,12 +96,16 @@ class ChatDeepInfra:
 
 if __name__ == "__main__":
     api_key = input("Digite sua API key: ")
+    
     base_url = "https://api.deepinfra.com/v1/openai"
     model = "meta-llama/Meta-Llama-3.1-70B-Instruct"
+    
+    #base_url = ""
+    #model = "gpt-5-mini"
 
     cdi = ChatDeepInfra(base_url, api_key, model)
 
-    cdi.set_system_prompt("Você é um assistente acadêmico. Mas vocé não tem papo furado é eficiente quando da respostas. Sua personalidade é espartana e estoica.")
+    cdi.set_system_prompt("Você é um assistente acadêmico. Responde apenas o necessário. Personalidade espartana e estoica.")
 
     # Pergunta sem memória
     print("\n--- Pergunta isolada ---")
