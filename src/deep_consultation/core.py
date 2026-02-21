@@ -37,9 +37,19 @@ if __name__ == "__main__":
     # from deep_consultation import consult_with_deepchat
     api_key = input("Digite sua API key: ")
     
-    base_url = "https://api.deepinfra.com/v1/openai"  
-    model = "meta-llama/Meta-Llama-3.1-70B-Instruct" 
+    # latencia 1.0
+    #base_url = "https://api.deepinfra.com/v1/openai"  
+    #model = "meta-llama/Meta-Llama-3.1-70B-Instruct" 
     
+    # latencia 2.0
+    #base_url = "https://api.deepinfra.com/v1/openai"  
+    #model = "Qwen/Qwen3-235B-A22B-Instruct-2507"
+    
+    # latencia 1.0 
+    base_url = "https://api.deepinfra.com/v1/openai"  
+    model = "deepseek-ai/DeepSeek-V3.2"
+    
+    # latencia 1.0 
     #base_url = None
     #model = "gpt-5-mini"
 
