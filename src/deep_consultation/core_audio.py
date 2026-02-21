@@ -12,7 +12,12 @@ def speech_file_transcript_deepinfra(   base_url,
     
     audio_path: The audio file object to transcribe. Supported formats are flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, and webm.
     '''
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    
+    # Cria client OpenAI, passando base_url apenas se não for None
+    if base_url and base_url.strip():
+        client = OpenAI(api_key=api_key, base_url=base_url.strip())
+    else:
+        client = OpenAI(api_key=api_key)
 
     try:
         with open(audio_path, "rb") as audio_file:
@@ -39,7 +44,13 @@ def speech_file_translate_deepinfra(base_url, api_key, model, audio_path):
     
     audio_path: caminho para o arquivo de áudio (mp3, wav, ogg, m4a...)
     """
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    
+    # Cria client OpenAI, passando base_url apenas se não for None
+    if base_url and base_url.strip():
+        client = OpenAI(api_key=api_key, base_url=base_url.strip())
+    else:
+        client = OpenAI(api_key=api_key)
+
 
     try:
         with open(audio_path, "rb") as audio_file:
