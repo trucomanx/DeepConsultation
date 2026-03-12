@@ -20,13 +20,19 @@ def consult_with_deepchat(base_url,api_key,model,user_msg,system_msg):
     )
 
     OUT = ""
+
     if stream:
         for event in chat_completion:
-            if event.choices[0].finish_reason:
+            if not event.choices:
                 continue
+
             delta = event.choices[0].delta
-            if hasattr(delta, "content") and delta.content:
+
+            if getattr(delta, "content", None):
                 OUT += delta.content
+
+            if event.choices[0].finish_reason:
+                break
     else:
         OUT = chat_completion.choices[0].message.content
 
